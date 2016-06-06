@@ -71,17 +71,15 @@ sprettende ball!
   ```
 
   Les koden nøye mens du legger den til på ball-figuren. Pass på at
-  du skjønner hva hver enkelt kloss gjør, fordi denne koden skal du
+  du forstår hva hver enkelt kloss gjør, fordi denne koden skal du
   endre selv etterhvert.
 
-+ Klikk på kodeblokken din for at den skal kjøre, og for at ballen
-  skal begynne å bevege seg. Ser det bra ut?
++ Klikk på kodeblokken din så den starter og ballen begynner å bevege seg. Ser det bra ut?
 
 ### En bedre måte å starte programmet på {.protip}
 
-Vi har laget meldingen `Ny ball` siden vi tenker at i selve spillet
-vil vi at ballen begynner fra midten av skjermen etter hver gang en
-spiller har gjort poeng. I denne enkle versjonen kan vi sende
+Vi har laget meldingen `Ny ball` fordi vi trenger å få ballen til å starte fra midten av skjermen hver gang en
+spiller har fått poeng i spillet. Foreløpig kan vi sende
 meldingen `Ny ball` hver gang det grønne flagget klikkes, for å
 enklere starte spillet.
 
@@ -95,27 +93,27 @@ enklere starte spillet.
 # Steg 2: Litt mer kontroll på ballen {.activity}
 
 *Klossen `sprett tilbake ved kanten`{.blockmotion} er veldig enkel å
- bruke, men dessverre gir den oss ikke så mye kontroll. For eksempel
- kan vi ikke bruke den om vi vil at ballen skal sprette andre steder
+ bruke, men dessverre gir den oss ikke så mye kontroll. Blant annet
+ kan vi ikke bruke den for å få ballen til å sprette andre steder
  enn ved kanten (for eksempel i en racket). Den er også vanskelig å
- bruke om vi vil at andre ting skal skje når ballen spretter, kanskje
- vi vil spille en lyd, endring på hastigheten eller endre litt i
+ bruke hvis vi vil at andre ting skal skje når ballen spretter, kanskje
+ vi vil spille en lyd, forandre farten eller endre litt på
  retningen.*
 
-Vi vil bruke `sansning`{.blocksensing}-klosser for å bedre
-kontrollere hvordan ballen spretter. Da kan vi oppdage når ballen
+Vi vil bruke `sansning`{.blocksensing}-klosser for å få bedre
+kontroll på hvordan ballen spretter. Da kan vi oppdage når ballen
 berører andre figurer (som for eksempel racketene til spillerene),
 eller når den berører spesielle farger.
 
 ## Sjekkliste {.check}
 
-+ Legg til din egen bakgrunn hvor du bruker forskjellige farger der du
-  vil at ballen skal sprette (vi har brukt lyseblått) og der du vil gi
++ Legg til din egen bakgrunn med en farge der du
+  vil at ballen skal sprette (vi har brukt lyseblått) og en annen farge der du vil gi
   poeng (vi har brukt mørkeblått).
 
   ![](bakgrunn.png)
 
-+ Om ballen treffer mål (mørkeblå) vil vi at den stopper, og
++ Hvis ballen treffer mål (mørkeblå) vil vi at den stopper, og
   etterhvert skal vi telle poeng. Dette kan vi gjøre ved å bytte ut
 
   ```blocks
@@ -161,36 +159,35 @@ eller når den berører spesielle farger.
 
 + Tegn en ny figur. Lag for eksempel et rektangel som kan fungere som racket.
 
-+ Skriv kode som starter på meldingen `Ny ball`. På samme måte som for
-  ballen skal denne bestå av to deler: Først må koden passe på at
-  racketen starter på riktig sted. Deretter går koden inn i en løkke
++ Lag et skript som startes med meldingen `Ny ball`. På samme måte som for
+  ballen skal skriptet bestå av to deler: først kode som passer på at
+  racketen starter på riktig sted, deretter en løkke
   hvor racketen flyttes opp og ned (`endre y`{.blockmotion}) når for
   eksempel tastene `W` og `S` trykkes.
 
-+ Test at du kan flytte racketen. Du vil kanskje også legge inn en
++ Sjekk at du kan flytte racketen med tastene. Fungerer det bra? Du vil kanskje legge inn en
   begrensning slik at ikke racketen kan forsvinne ut av skjermen? Det
-  kan du gjøre for eksempel med en test som ser omtrent slik ut:
+  kan du gjøre med en sammensatt betingelse som ser omtrent slik ut:
 
   ```blocks
   hvis <<tast [w v] trykket> og <(y-posisjon) < [150]>>
   slutt
   ```
 
-+ Når du er fornøyd med hvordan denne racketen styres kan du kopiere
-  den.
++ Lag en kopi av racket-figuren når du har fått den til å virke bra.
 
 + Endre litt på den nye racket-figuren. Du kan for eksempel endre
-  fargen på den om du vil? Du må også endre litt i koden, slik at den
-  starter på andre siden av skjermen og slik at den reagerer på andre
+  fargen på den. Du må også endre litt i koden, slik at den
+  starter på andre siden av skjermen og slik at den styres med andre
   taster, for eksempel `pil opp` og `pil ned`.
 
-+ Til slutt må vi legge til kode på ball-figuren slik at ballen
-  spretter når den berører en racket. Dette kan gjøres veldig likt
-  hvordan vi fikk ballen til å sprette på veggen. Du må bare bruke
-  `berører farge`{.blocksensing} i stedet for
-  `berører`{.blocksensing}.
++ Til slutt må du gå til ball-figuren og legge til kode slik at ballen
+  spretter når den berører en racket. Dette kan gjøres omtrent slik
+  vi fikk ballen til å sprette på veggen, men du må
+  bruke `berører`{.blocksensing} i stedet for 
+  `berører farge`{.blocksensing}.
 
-+ Siden ballen nå treffer en vertikal racket i stedet for en
++ Fordi ballen nå treffer en vertikal racket i stedet for en
   horisontal vegg må vi også bytte ut tallet `180` i `pek i
   retning`{.blockmotion}-klossen. Hvilket tall kan du bruke? Prøv deg
   fram, eller tenk gjennom hvordan en ball spretter når den treffer en
@@ -229,7 +226,7 @@ her er noen ideer som kan gjøre spillet enda morsommere å spille:
   to racketene.
 
 + Det kan være et problem at ballen bare går opp og ned, og ikke
-  sidelengs (eller veldig sakte sidelengs) siden vi har satt
+  sidelengs (eller veldig sakte sidelengs) fordi vi har satt
   utgangsretningen til ballen helt tilfeldig. Kan du begrense hvilke
   retninger ballen starter i slik at den alltid beveger seg noe
   sidelengs?
