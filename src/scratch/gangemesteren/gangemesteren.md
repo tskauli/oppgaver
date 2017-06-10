@@ -44,7 +44,7 @@ gangetabellen.
 
 __Klikk på det grønne flagget.__
 
-+ Stiller `Læremester` deg et gangestykke?
++ Sier `Læremester` et gangestykke?
 
 + Vi skal etterhvert se hvordan vi kan få `Læremester` til å si hele
   teksten, i stedet for bare et ord om gangen.
